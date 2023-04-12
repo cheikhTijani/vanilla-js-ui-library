@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="UI.js"></script>
+    <title>Vanilla Javascript UI library</title>
+</head>
+<body>
+        <h1>Vanilla Javascript UI library</h1>
+        <div class="overlay d-none"></div>
+        <section class="container modal-section">
+            <h2>Modal</h2>
+            <h4>Web development Fondamentals</h4>
+            <p>click on the numbers to see details</p>
+            <div class="top3">
+                <div class="top3__item">
+                    <img alt="HTML" src="img/html-5.png">
+                    <button class="showModal">1</button>
+                </div>
+                <div class="top3__item">
+                    <img src="img/css-3.png" alt="CSS">
+                    <button class="showModal">2</button>
+                </div>
+                <div class="top3__item">
+                    <img src="img/js.png" alt="Javascript">
+                    <button class="showModal">3</button>
+                </div>
+            </div>
+            <div class="modals modal1 d-none">
+                    <button class="closeModal">x</button>
+                    <h3>HTML</h3>
+                    <p>The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.</p>
+            </div>
+            <div class="modals modal2 d-none">
+                <button class="closeModal">x</button>
+                <h3>CSS</h3>
+                <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.</p>
+            </div>
+            <div class="modals modal3 d-none">
+                <button class="closeModal">x</button>
+                <h3>JavaScript</h3>
+                <p>JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.</p>
+            </div>
+
+        </section>
+
+        <section class="container">
+            <h2>Tabbed components</h2>
+            <h4>CSS Frameworks and libraries</h4>
+            <div class="tabs">
+                <div class="tabs__tab-container">
+                    <button class="Btn tabs__tab tabs__tab--1 tabs__tab--active" data-tab="1">
+                        <span>01 </span>BootStrap
+                    </button>
+                    <button class="Btn tabs__tab tabs__tab--2" data-tab="2">
+                        <span>02 </span>Tailwind
+                    </button>
+                    <button class="Btn tabs__tab tabs__tab--2" data-tab="3">
+                        <span>03 </span>Sass
+                    </button>
+                </div>
+                <div class="tabs__tab-content tabs__content--1 tabs__content--active">
+                    <div class="tabs__img tabs__img--1">
+                        <img src="img/bootstrap.png" alt="Bootstrap">
+                    </div>
+                    <h5 class="tabs__header">The most popular HTML, CSS and JS library</h5>
+                    <p>Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
+                </div>
+                <div class="tabs__tab-content tabs__content--2">
+                    <div class="tabs__img tabs__img--2">
+                        <img src="img/tailwind.png" alt="Tailwind">
+                    </div>
+                    <h5 class="tabs__header">A CSS framework to build any design, directly in your markup</h5>
+                    <p>Rapidly build modern websites without ever leaving your HTML. A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup</p>
+                </div>
+                <div class="tabs__tab-content tabs__content--3">
+                    <div class="tabs__img tabs__img--3">
+                        <img src="img/sass.png" alt="Sass">
+                    </div>
+                    <h5 class="tabs__header">Syntactically Awesome Stylesheet, A CSS pre-processor</h5>
+                    <p>When Stylesheets get larger, more complex, and harder to maintain, we nedd to use a CSS pre-processor. Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions...</p>
+                </div>
+            </div>
+        </section>
+        <!-- Digital and Analog clock -->
+        <section class="container">
+            <h2>Clocks</h2>
+            <div class="clocks">
+                <div class="analog-clock">
+                    <div class="outer-clock-face">
+                        <div class="marking marking-one"></div>
+                        <div class="marking marking-two"></div>
+                        <div class="marking marking-three"></div>
+                        <div class="marking marking-four"></div>
+                    </div>
+                    <div class="inner-clock-face">
+                    </div>
+                    <div class="hand hour-hand"></div>
+                    <div class="hand min-hand"></div>
+                    <div class="hand second-hand"></div>
+                </div>
+    
+                <div class="digital-clock">
+                </div>
+            </div>
+            
+
+        </section>
+        <!-- Sliders -->
+        <section class="container">
+            <h2>Slider</h2>
+            <div class="slider">
+                <div class="slide slide--1">
+                    <img src="img/img-1.jpg" alt="Photo 1">
+                </div>
+                <div class="slide slide--2">
+                    <img src="img/img-2.jpg" alt="Photo 2">
+                </div>
+                <div class="slide slide--3">
+                    <img src="img/img-3.jpg" alt="Photo 3">
+                </div>
+                <div class="slide slide--4">
+                    <img src="img/img-4.jpg" alt="Photo 4">
+                </div>
+
+                <button class="slider__btn slider__btn--left">&#60;</button>
+                <button class="slider__btn slider__btn--right">&#62;</button>
+                <div class="dots"></div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="container faqs">
+            <h2>Web Tools FAQ</h2>
+            <div class="faq">
+                <h3 class="faq__title">
+                    <img src="img/plus.png" alt="plus">
+                    <a href="#">What is a Package manager?</a>
+                </h3>
+                <div class="faq__content d-none">
+                    <p>A package manager or package-management system is a collection of software tools that automates the process of installing, upgrading, configuring, and removing computer programs for a computer in a consistent manner. <strong>NPM</strong> is the most popular package manager.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3 class="faq__title">
+                    <img src="img/plus.png" alt="plus">
+                    <a href="#">What are Build tools?</a>
+                </h3>
+                <div class="faq__content d-none">
+                    <p>Build tool is a program that automates the process of compiling, testing ,packaging and deploying of source code in the most efficient manner. It requires very little human interaction helping developers improve their productivity. <strong>Webpack</strong> is one of the most popular build tools.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <h3 class="faq__title">
+                    <img src="img/plus.png" alt="plus">
+                    <a href="#">What is version control?</a>
+                </h3>
+                <div class="faq__content d-none">
+                    <p>Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time. The most popular version control system is <strong>Git</strong>.</p>
+                </div>
+            </div>
+        </section>
+
+</body>
+</html>

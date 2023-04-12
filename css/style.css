@@ -1,0 +1,664 @@
+/*************************/
+/* GENERAL */
+/*************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    color: #333;
+    background-color: whitesmoke;
+    line-height: 1.9;
+}
+
+h1 {
+    font-size: 5rem;
+    padding: 3.5rem 0;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    padding: 2.5rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-size: 2.5rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+p {
+    font-size: 1.7rem;
+}
+
+section {
+    margin: 0 auto;
+    max-width: 1000px;
+    min-height: 45rem;
+}
+
+
+
+
+/*************************/
+/* MODAL SECTION */
+/*************************/
+
+.modal-section {
+    position: relative;
+    height: 80vh;
+}
+
+.modal-section p {
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.top3 {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+.top3__item {
+    width: 15rem;
+    height: 15rem;
+    margin: 2rem 0;
+    z-index: 1;
+
+}
+
+.top3__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.showModal {
+    display: block;
+    border: none;
+    margin: .7rem auto;
+    border-radius: 50%;
+    padding: .2rem 1.5rem;
+    background-color: #333;
+    color: whitesmoke;
+    font-size: 2rem;
+    cursor: pointer;
+    border: none;
+}
+
+.closeModal {
+    position: absolute;
+    top: .7rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.showModal:hover {
+    background-color: #000;
+}
+
+.closeModal:hover {
+    color: #000;
+}
+
+.modals h3 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.modals p {
+    font-size: 1.8rem;
+    text-align: justify;
+    margin-bottom: 2rem;
+}
+
+
+
+.modals {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 6rem;
+    width: 60%;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    background-color: whitesmoke;
+
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 9;
+}
+
+/*************************/
+/* TABS SECTION */
+/*************************/
+
+.tabs {
+    margin: 3rem auto 10rem auto;
+    background-color: #fff;
+}
+
+.Btn {
+    display: inline-block;
+    color: whitesmoke;
+    background-color: #333;
+    font-size: 1.6rem;
+    border: none;
+    padding: .5rem 2rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.Btn:hover {
+    background-color: #000;
+}
+
+.tabs__tab-container {
+    display: flex;
+    justify-content: center;
+}
+
+.tabs__tab {
+    margin-right: 2rem;
+    transform: translateY(-50%);
+}
+
+.tabs__tab span {
+    margin-right: 1rem;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.tabs__tab--active {
+    transform: translateY(-66%);
+}
+
+.tabs__tab-content {
+    display: none;
+    /* display: none; */
+    font-size: 1.8rem;
+    padding: 1rem 7rem 6rem 7rem;
+}
+
+.tabs__content--active {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    column-gap: 3rem;
+    row-gap: 0.5rem;
+}
+
+.tabs__header {
+    font-size: 2.5rem;
+    font-weight: 600;
+    align-self: center;
+}
+
+.tabs__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    width: 7rem;
+}
+
+.tabs__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tabs__tab-content p {
+    grid-column: 2;
+    font-size: 2rem;
+
+}
+
+/*************************/
+/* CLOCKS SECTION */
+/*************************/
+
+.clocks {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+/* Analog clock */
+.analog-clock {
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    padding: 1rem;
+    background: #333;
+    border: 7px solid #555;
+    box-shadow: -4px -4px 10px rgba(67, 67, 67, 0.5), inset 4px 4px 10px rgba(0, 0, 0, 0.5), inset -4px -4px 10px rgba(67, 67, 67, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    margin: 2rem auto;
+}
+
+.outer-clock-face {
+    position: relative;
+    background: #333;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+
+.outer-clock-face::after {
+    transform: rotate(90deg);
+}
+
+.outer-clock-face::after,
+.outer-clock-face::before,
+.outer-clock-face .marking {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: white;
+    z-index: 0;
+    left: 49%;
+}
+
+.outer-clock-face .marking {
+    background: #bdbdbd;
+    width: 2px;
+}
+
+.outer-clock-face .marking.marking-one {
+    transform: rotate(30deg);
+}
+
+.outer-clock-face .marking.marking-two {
+    transform: rotate(60deg);
+}
+
+.outer-clock-face .marking.marking-three {
+    transform: rotate(120deg);
+}
+
+.outer-clock-face .marking.marking-four {
+    transform: rotate(150deg);
+}
+
+.inner-clock-face {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+    background: #333;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.inner-clock-face::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 18px;
+    background: #fff;
+    z-index: 11;
+}
+
+.hand {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    right: 50%;
+    height: 5px;
+    /* background: whitesmoke; */
+    /* border-radius: 2px; */
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+}
+
+.hand.hour-hand {
+    width: 3.3rem;
+    z-index: 3;
+    background: #fff;
+}
+
+.hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 29%;
+    background: #fff;
+}
+
+.hand.second-hand {
+    background: #fff;
+    width: 34%;
+    height: 1.5px;
+    z-index: 11;
+}
+
+/* digital clock */
+.digital-clock {
+    background-color: #333;
+    padding: 0 4rem;
+    border-radius: 11px;
+    color: #f5f5f5;
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 0 auto;
+    font-family: 'Orbitron', sans-serif;
+}
+
+
+/*************************/
+/* SLIDER SECTION */
+/*************************/
+
+.slider {
+    max-width: 720px;
+    height: 50rem;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 10rem;
+
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 1s;
+}
+
+.slide>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider__btn {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+
+    border: none;
+    background: rgba(0, 0, 0, .6);
+    font-family: inherit;
+    color: #f5f5f5;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    font-size: 2.1rem;
+    cursor: pointer;
+}
+
+.slider__btn--left {
+    left: 3.5%;
+    transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+    right: 3.5%;
+    transform: translate(50%, -50%);
+}
+
+.dots {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.dots__dot {
+    border: none;
+    background-color: #b9b9b9;
+    opacity: 0.7;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.dots__dot:last-child {
+    margin: 0;
+}
+
+.dots__dot--active {
+    background-color: #fff;
+    opacity: 1;
+}
+
+/*************************/
+/* FAQ SECTION */
+/*************************/
+.faqs {
+    margin-bottom: 5rem;
+}
+
+
+.faq__title a {
+    color: #444;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.faq__title a:hover {
+    color: #000;
+}
+
+.faq__title {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: .7rem;
+    margin-left: 2rem;
+    padding-left: 3rem;
+}
+
+.faq__title img {
+    position: absolute;
+    top: 0;
+    left: -45%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: .8;
+}
+
+
+
+.faq__content p {
+    font-size: 1.7rem;
+    padding-bottom: .3rem;
+    padding-left: 5.5rem;
+}
+
+
+
+
+
+
+
+/*************************/
+/* MEDIA QUERIES */
+/*************************/
+@media only screen and (max-width: 800px) {
+    html {
+        font-size: 59%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 55%;
+    }
+
+    h1 {
+        font-size: 3rem;
+        padding: 1.5rem 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+        padding: 1.5rem 0;
+    }
+
+    h4 {
+        font-size: 1.7rem;
+        padding: .5rem 0;
+    }
+
+    p {
+        font-size: 1.6rem;
+    }
+
+    /* Modal */
+
+    .modals p {
+        font-size: 1.6rem;
+    }
+
+
+    .top3 {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    .top3__item {
+        width: 10rem;
+        height: 10rem;
+        display: flex;
+        flex-direction: row-reverse;
+        column-gap: 1rem;
+        align-items: center;
+    }
+
+    .modals {
+        padding: 3rem;
+        width: 90%;
+    }
+
+    .modal-section p {
+        font-size: 1.6rem;
+    }
+
+    /* TABS */
+
+    .tabs {
+        margin: 5rem auto 10rem auto;
+    }
+
+    .Btn {
+        padding: .6rem 1.4rem;
+        font-size: 1.7rem;
+    }
+
+    .tabs__tab-container {
+        justify-content: space-between;
+    }
+
+    .tabs__tab {
+        margin-right: 1rem;
+    }
+
+    .tabs__tab span {
+        margin-right: .5rem;
+    }
+
+    .tabs__content--active {
+        grid-template-columns: 1fr;
+        column-gap: 1rem;
+    }
+
+    .tabs__tab-content p {
+        grid-column: 1;
+        font-size: 2rem;
+
+    }
+
+    .tabs__tab-content {
+        padding: 2rem 4rem;
+    }
+
+    /* CLOCKS  */
+    .clocks {
+        flex-direction: column;
+        row-gap: 3rem;
+    }
+
+    /* SLIDER  */
+    .slider {
+        height: 30rem;
+        margin: 1rem 2rem;
+    }
+
+    .slide {
+        height: 30rem;
+    }
+
+    .slider__btn--left {
+        left: 5%;
+    }
+
+    .slider__btn--right {
+        right: 5%;
+    }
+
+    /* FAQ  */
+    .faqs {
+        margin-bottom: 5rem;
+    }
+
+    .faq__title {
+        font-size: 2rem;
+    }
+
+    .faq__title img {
+        left: -50%;
+    }
+
+}
